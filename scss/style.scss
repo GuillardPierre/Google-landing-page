@@ -1,0 +1,171 @@
+$primary-color: #ffffff;
+$button-background: #f8f9fa;
+$footer-color: #f2f2f2;
+$icon-size: 24px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: $primary-color;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 25px;
+
+  &--block {
+    display: flex;
+    gap: 15px;
+    ul {
+      font-size: 14px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      :hover {
+        text-decoration: underline;
+      }
+    }
+    &--svg1 {
+      position: relative;
+      top: -5px;
+      width: $icon-size;
+      :hover {
+        cursor: pointer;
+      }
+    }
+    &--svg2 {
+      position: relative;
+      top: -12px;
+      width: 40px;
+      :hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  &--img {
+    width: 270px;
+    height: 90px;
+    margin: auto;
+  }
+}
+
+.main--input:hover,
+.main--input:focus {
+  box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
+}
+
+.input-container {
+  position: relative;
+  width: 580px;
+  margin: auto;
+  margin-top: 25px;
+
+  .main--input {
+    width: 100%;
+    height: 45px;
+    padding: 0 calc($icon-size + 30px) 0 calc($icon-size + 30px); // Augmente le padding-left
+    border: 1px solid #dfe1e5;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $icon-size;
+    height: $icon-size;
+
+    &-left {
+      left: 15px;
+    }
+
+    &-right {
+      right: 15px;
+
+      &:nth-of-type(2) {
+        right: 45px;
+      }
+    }
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.button-container {
+  margin: auto;
+  margin-top: 40px;
+
+  .main--button {
+    height: 34px;
+    background-color: $button-background;
+    border: none;
+    padding: 0 16px;
+    border-radius: 4px;
+    &:hover {
+      border: 1px solid;
+      border-color: lightgray;
+    }
+  }
+}
+
+.footer {
+  background-color: $footer-color;
+  font-size: 14px;
+  padding-bottom: 20px;
+
+  &--header {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  &--main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+    :hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    &--ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      :hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
